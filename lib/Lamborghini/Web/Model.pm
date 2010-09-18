@@ -9,16 +9,15 @@ has 'schema' => (
     isa     => 'Lamborghini::Schema',
     default => sub {
         return Lamborghini::Schema->connect(
-            'dbi:SQLite:dbname=lamborghini',
+            'dbi:SQLite:dbname=lamborghini.db',
             '', '',
             {   sqlt_unicode => 1,
                 autocommit   => 1,
                 quote_char   => q/"/,
                 name_sep     => q/./,
             },
-            )
-
-    }
+        );
+    },
 );
 
 1;

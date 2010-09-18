@@ -1,0 +1,15 @@
+severity = 5 
+color = 1
+theme = not more
+[CodeLayout::RequireTidyCode]
+perltidyrc = /usr/local/share/perltidyrc 
+[Documentation::RequirePodAtEnd]
+[Bangs::ProhibitCommentedOutCode]
+[TestingAndDebugging::RequireUseStrict]
+equivalent_modules = HTML::FormHandler::Moose
+[-BuiltinFunctions::ProhibitStringyEval]
+[-CodeLayout::RequireFinalSemicolon]
+[-CodeLayout::RequireASCII]
+[-Subroutines::RequireFinalReturn]
+[-Variables::RequireLocalizedPunctuationVars]
+[-Subroutines::ProhibitBuiltinHomonyms]

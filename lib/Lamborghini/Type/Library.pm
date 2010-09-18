@@ -1,4 +1,4 @@
-package Lamborghini::Types::Library;
+package Lamborghini::Type::Library;
 
 use Regexp::Common 'RE_ALL';
 
@@ -6,7 +6,7 @@ use Email::Valid;
 use MooseX::Types::Moose qw/Bool Value Num Int Str ArrayRef HashRef Object/;
 use MooseX::Types::Common::String
     qw/SimpleStr NonEmptySimpleStr StrongPassword NonEmptyStr/;
-use MooseX::Types::URI qw/Uri FileURI/;
+use MooseX::Types::URI qw/Uri FileUri/;
 use Moose::Util::TypeConstraints;
 use DateTime;
 use Net::DNS;
