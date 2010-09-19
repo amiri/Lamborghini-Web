@@ -1,11 +1,10 @@
 package Lamborghini::Forms;
+
 use HTML::FormHandler::Moose;
 use Method::Signatures::Simple;
 use Lamborghini::I18N;
 extends 'HTML::FormHandler::Model::DBIC';
-with qw/
-    HTML::FormHandler::Render::Simple
-    /;
+with 'HTML::FormHandler::Render::Simple';
 
 has '+field_name_space' => ( default => 'Lamborghini::Forms::Fields' );
 

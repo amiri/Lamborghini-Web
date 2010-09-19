@@ -104,3 +104,7 @@ embed,iframe
 	display:block;
 	margin:0 auto;
 }
+
+.success,.notice,.error {
+    display:block;
+}

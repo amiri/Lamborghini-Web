@@ -20,6 +20,7 @@
 
 
   <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/blueprint/src/forms.css">
   <link rel="stylesheet" href="static/css/lamborghini.css">
 
   <script src="static/js/modernizr-1.5.min.js"></script>
@@ -28,13 +29,26 @@
 
 <body>
 
-  <div id="container">
+    <div id="container">
         <div id="main">
             <div id="featured_model">
             </div><!--end featured_model-->
             <div id="featured_drink">
             </div><!--end featured_drink-->
             <header>
+                <div id="message">
+                    [% IF status_msg %]
+                        <span class="success">[% status_msg %]</span>
+                    [% END %]
+
+                    [% IF notice_msg %]
+                        <span class="notice">[% notice_msg %]</span>
+                    [% END %]
+                    
+                    [% IF error_msg %]
+                        <span class="error">[% error_msg %]</span>
+                    [% END %]
+                </div><!-- end message -->
             </header>
                 [% content %]
             <div id="links">

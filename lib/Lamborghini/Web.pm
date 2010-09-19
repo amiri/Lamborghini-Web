@@ -7,19 +7,17 @@ use Catalyst::Runtime 5.80;
 
 use Catalyst qw/
     -Debug
-    ConfigLoader
     Authentication
     Authorization::Roles
-    Authorization::ACL
-
-    Static::Simple
+    ConfigLoader
+    I18N
     Session
-    Session::Store::DBIC
     Session::State::Cookie
+    Session::Store::DBIC
     StackTrace
-
-    Unicode::Encoding
     Static::Simple
+    Static::Simple
+    Unicode::Encoding
     /;
 
 extends 'Catalyst';
