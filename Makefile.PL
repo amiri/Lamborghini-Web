@@ -18,6 +18,7 @@ requires 'DateTime';
 requires 'Email::Valid';
 requires 'File::MimeInfo::Magic';
 requires 'List::MoreUtils';
+requires 'Method::Signatures::Simple';
 requires 'Moose';
 requires 'Moose';
 requires 'Moose::Util::TypeConstraints';

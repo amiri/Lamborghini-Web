@@ -1,14 +1,29 @@
 package Lamborghini::Web::Controller::Submission;
+
 use Moose;
 use namespace::autoclean;
+use aliased 'Lamborghini::Forms::SubmissionForm';
 
 BEGIN { extends 'Catalyst::Controller'; }
 
-sub index : Path : Args(0) {
-    my ( $self, $c ) = @_;
+has 'submission_form' => (
+    is => 'ro',
+    isa => SubmissionForm,
+    default => sub {
+        SubmissionForm->new,
+    }
+);
 
-    $c->response->body(
-        'Matched Lamborghini::Web::Controller::Submission in Submission.');
+sub base :Chained('/') PathPart('submit') CaptureArgs(0) {
+    my ($self,$c) = @_;
+}
+
+sub index : Chained('base') PathPart('') Args(0) {
+    my ( $self, $c ) = @_;
+    $c->stash(
+        template => 'submission/index.tt2',
+        form => $self->submission_form,
+    );
 }
 
 __PACKAGE__->meta->make_immutable;

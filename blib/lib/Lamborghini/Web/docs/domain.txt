@@ -1,0 +1,26 @@
+class User {
+    has date isa DateTime
+    has first_name isa Text,
+    has last_name isa Text,
+    has email isa Email,
+    has pictures isa ArrayRef[Picture] where picture.user is me,
+    has roles isa ArrayRef[Role],
+}
+
+class Picture {
+    has date isa DateTime,
+    has file isa FileURI,
+    has user isa User,
+    might have title isa Text,
+    might have description isa Text,
+}
+
+class Role {
+    has name isa Text,
+    has users isa ArrayRef[User]
+}
+
+class UserRole {
+    has user isa User,
+    has role isa Role
+}

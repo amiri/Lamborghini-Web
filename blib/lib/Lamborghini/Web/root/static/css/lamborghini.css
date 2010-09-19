@@ -1,0 +1,29 @@
+div#container {
+    margin: 0 auto;
+}
+
+header
+{
+	display:block;
+}
+
+header
+{
+	background:url("/static/images/header.png") no-repeat scroll 0 0 transparent;
+}
+
+div#movie {
+    background:url("/static/images/movie.png") no-repeat scroll 0 0 transparent;
+    margin: 0 auto;
+}
+
+div#featured_model {
+    background:url("/static/images/cassie.png") no-repeat scroll 0 0 transparent;
+    float:left;
+    width:340px;
+}
+div#featured_drink {
+    background:url("/static/images/drink.png") no-repeat scroll 0 0 transparent;
+    width:340px;
+
+}

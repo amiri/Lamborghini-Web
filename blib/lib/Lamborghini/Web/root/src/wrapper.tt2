@@ -1,9 +1,9 @@
 <!doctype html>  
-    <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-    <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-    <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-    <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -29,27 +29,9 @@
 <body>
 
   <div id="container">
-        <div id="main">
-            <div id="featured_model">
-            </div><!--end featured_model-->
-            <div id="featured_drink">
-            </div><!--end featured_drink-->
-            <header>
-            </header>
-                [% content %]
-            <div id="links">
-                <div id="submit_info">
-                    <a href="[% c.uri_for('/submit') %]"></a>
-                </div><!-- end submit_info -->
-                <div id="nightclub">
-                    <a href="http://google.com"></a>
-                </div><!-- end nightclub -->
-                <div id="dj">
-                    <a href="http://disney.com"></a>
-                </div><!-- end dj -->
-            </div><!-- end links -->
-        </div><!--end main-->
+        [% content %]
     <footer>
+    <p>This is the footer.</p>
     </footer>
   </div> <!--! end of #container -->
 
