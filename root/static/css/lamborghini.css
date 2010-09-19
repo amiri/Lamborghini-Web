@@ -92,6 +92,12 @@ div#video
 	margin:0 auto;
 }
 
+div#submission
+{
+	margin:0 auto;
+	min-height:440px;
+}
+
 embed,iframe
 {
 	max-height:440px;
