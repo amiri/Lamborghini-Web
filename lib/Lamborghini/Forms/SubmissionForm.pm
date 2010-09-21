@@ -10,6 +10,19 @@ extends 'Lamborghini::Forms';
 has '+item_class' => ( default => 'User' );
 has '+enctype'    => ( default => 'multipart/form-data' );
 
+has 'thumbnail_dir' => (
+    is     => 'rw',
+    isa    => 'Path::Class::Dir',
+    coerce => 1,
+);
+
+has 'picture_dir' => (
+    is     => 'rw',
+    isa    => 'Path::Class::Dir',
+    coerce => 1,
+);
+
+
 has 'validator' => (
     is      => 'ro',
     isa     => Picture,
@@ -56,6 +69,17 @@ method validate_file {
 
     $self->field('file')->add_error('That is not a valid image file')
         unless $self->validator->validate_image( $file_field->value );
+}
+
+method validate {
+    my $upload = $self->field('file')->value;
+
+    $self->validator->process_image( $self->picture_dir, $self->thumbnail_dir,
+        $upload );
+
+    if ( $self->field('file')->value ) {
+        $self->field('file')->value( $self->field('file')->value->filename );
+    }
 }
 
 __PACKAGE__->meta->make_immutable;

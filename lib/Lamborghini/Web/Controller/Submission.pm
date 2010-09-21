@@ -34,13 +34,15 @@ sub index : Chained('base') PathPart('') Args(0) {
         ctx    => $c,
         item   => $new_user,
         params => $c->req->params,
+        picture_dir => $c->config->{"Model::Picture"}->{user_picture_dir},
+        thumbnail_dir => $c->config->{"Model::Picture"}->{user_thumbnail_dir},
+
     );
-    $c->log->debug( "Errors: " . Dwarn $form->errors );
     $c->stash( fillinform => $form->fif, );
     return unless $form->validated;
     my $new_picture = $c->model('DB::Picture')->create(
         {   user        => $new_user->id,
-            file        => $form->field('file')->value->filename,
+            file        => $form->field('file')->value,
             description => $new_user->email,
         }
     );

@@ -21,6 +21,7 @@
 
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/blueprint/src/forms.css">
+  <link rel="stylesheet" href="static/css/nivo-slider.css">
   <link rel="stylesheet" href="static/css/lamborghini.css">
 
   <script src="static/js/modernizr-1.5.min.js"></script>
@@ -74,6 +75,7 @@
 
   <script src="static/js/plugins.js"></script>
   <script src="static/js/script.js"></script>
+  <script src="static/js/jquery.nivo.slider.pack.js"></script>
 
   <!--[if lt IE 7 ]>
     <script src="static/js/dd_belatedpng.js"></script>
@@ -93,6 +95,12 @@
     s.parentNode.insertBefore(g, s);
    })(document, 'script');
   </script>
-  
+
+  <script>
+    $(window).load(function () {
+     $("#slider").nivoSlider();
+    });
+  </script>
+
 </body>
 </html>

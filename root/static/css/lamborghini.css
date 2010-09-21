@@ -85,7 +85,7 @@ div#dj
 	height:100%;
 }
 
-div#video
+div#video,div#slide
 {
 	padding-top:70px;
 	width:998px;
@@ -98,7 +98,7 @@ div#submission
 	min-height:440px;
 }
 
-embed,iframe
+embed,iframe,div#slider
 {
 	max-height:440px;
 	display:block;

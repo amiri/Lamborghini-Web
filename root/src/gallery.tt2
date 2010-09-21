@@ -1,0 +1,9 @@
+<div id="movie">
+    <div id="slide">
+        <div id="slider"> 
+            [% FOR image IN images %]
+                <img src="/static/pictures/users/[% image.file %]" alt="[% image.description %]" height="440px" />
+            [% END %]
+        </div><!-- end slider -->
+    </div><!-- end slide-->
+</div><!--end movie-->
