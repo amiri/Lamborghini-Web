@@ -4,8 +4,9 @@ use Moose::Role;
 use Method::Signatures::Simple;
 
 method _localize {
-    #shift->ctx->loc(@_);
-    shift;
+    shift->ctx->loc(@_);
+
+    #shift;
 }
 
 1;

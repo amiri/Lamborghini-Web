@@ -1,0 +1,20 @@
+[% meta.title = "Admin" %]
+
+<div id="admin" class="span-24">
+    <div id="admin_edit" class="span-11 last">
+        <h2>[% c.loc('Edit Data') %]</h2>
+            <div id="edit_data">
+                <p>
+                    [% c.loc('Click one of the links below to edit data.') %]
+                </p>
+                <ul>
+                    [% FOREACH domain_object IN domain_objects -%]
+                        <li>
+                            <a href="[% domain_object.value %]">[% domain_object.label %]</a>
+                        </li>
+                    [% END -%]
+                </ul>
+            </div><!--end edit_data-->
+    </div> <!--end admin_edit -->
+
+</div> <!-- end admin -->

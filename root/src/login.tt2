@@ -1,0 +1,11 @@
+[% META title = 'Login' %]
+
+<div>
+    <fieldset>
+        <form method="post" action="[% c.uri_for('/login') %]">
+            [% form.field('email').render %]
+            [% form.field('password').render %]
+            [% form.field('submit').render %]
+        </form>
+    </fieldset>
+</div>

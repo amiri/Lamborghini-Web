@@ -15,20 +15,20 @@
 
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
 
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="[% c.uri_for('/favicon.ico') %]">
+  <link rel="apple-touch-icon" href="[% c.uri_for('/apple-touch-icon.png') %]">
 
 
-  <link rel="stylesheet" href="static/css/style.css">
-  <link rel="stylesheet" href="static/css/blueprint/src/forms.css">
-  <link rel="stylesheet" href="static/css/nivo-slider.css">
-  <link rel="stylesheet" href="static/css/lamborghini.css">
+  <link rel="stylesheet" href="[% c.uri_for('/static/css/style.css') %]">
+  <link rel="stylesheet" href="[% c.uri_for('/static/css/blueprint/src/forms.css') %]">
+  <link rel="stylesheet" href="[% c.uri_for('/static/css/nivo-slider.css') %]">
+  <link rel="stylesheet" href="[% c.uri_for('/static/css/lamborghini.css') %]">
 
-  <script src="static/js/modernizr-1.5.min.js"></script>
+  <script src="[% c.uri_for('/static/js/modernizr-1.5.min.js') %]"></script>
 
 </head>
 
-<body>
+<body id="[% body_id %]">
 
     <div id="container">
         <div id="main">
@@ -56,12 +56,25 @@
                 <div id="submit_info">
                     <a href="[% c.uri_for('/submit') %]"></a>
                 </div><!-- end submit_info -->
-                <div id="nightclub">
+                <div id="energy">
                     <a href="http://google.com"></a>
-                </div><!-- end nightclub -->
+                </div><!-- end energy -->
+
+                <div id="photo_shoot">
+                    <a href="http://google.com"></a>
+                </div><!-- end photo_shoot -->
+                
+                <div id="hotel">
+                    <a href="http://google.com"></a>
+                </div><!-- end hotel -->
+                
                 <div id="dj">
                     <a href="http://disney.com"></a>
                 </div><!-- end dj -->
+                
+                <div id="tolga">
+                    <a href="http://disney.com"></a>
+                </div><!-- end tolga -->
             </div><!-- end links -->
         </div><!--end main-->
     <footer>
@@ -70,20 +83,28 @@
 
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script>!window.jQuery && document.write('<script src="static/js/jquery-1.4.2.min.js"><\/script>')</script>
+  <script>!window.jQuery && document.write('<script src="/static/js/jquery-1.4.2.min.js"><\/script>')</script>
 
 
-  <script src="static/js/plugins.js"></script>
-  <script src="static/js/script.js"></script>
-  <script src="static/js/jquery.nivo.slider.pack.js"></script>
+  <script src="[% c.uri_for('/static/js/plugins.js') %]"></script>
+  <script src="[% c.uri_for('/static/js/jquery.scrollTo-1.4.2-min.js') %]"></script>
+  <script src="[% c.uri_for('/static/js/jquery.nivo.slider.pack.js') %]"></script>
+  <script src="[% c.uri_for('/static/js/swfobject.js') %]"></script>
+  <script src="[% c.uri_for('/static/js/script.js') %]"></script>
 
   <!--[if lt IE 7 ]>
-    <script src="static/js/dd_belatedpng.js"></script>
+    <script src="[% c.uri_for('/static/js/dd_belatedpng.js') %]"></script>
     <script>
       DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images
     </script>
   <![endif]-->
 
+
+  <script>
+      $(document).ready(function() {
+          $('body').scrollTo('50%', {axis: 'x'});
+      });
+  </script>
 
   <script>
    var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
@@ -96,11 +117,12 @@
    })(document, 'script');
   </script>
 
+[% IF body_id == 'gallery' %]
   <script>
     $(window).load(function () {
      $("#slider").nivoSlider();
     });
   </script>
-
+[% END %]
 </body>
 </html>

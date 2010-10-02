@@ -1,5 +1,4 @@
 <div id="movie">
-    <div id="video">
-        <iframe src="http://player.vimeo.com/video/993998" width="586" height="440" frameborder="0"></iframe>
+    <div id="video" class="video_file" title="/static/videos/promo2.mp4">
     </div><!-- end video -->
 </div><!--end movie-->

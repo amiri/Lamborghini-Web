@@ -1,8 +1,9 @@
+[% body_id = 'gallery' %]
 <div id="movie">
     <div id="slide">
         <div id="slider"> 
             [% FOR image IN images %]
-                <img src="/static/pictures/users/[% image.file %]" alt="[% image.description %]" height="440px" />
+                <img src="/static/pictures/gallery/[% image.file %]" alt="[% image.description %]" height="440px" />
             [% END %]
         </div><!-- end slider -->
     </div><!-- end slide-->

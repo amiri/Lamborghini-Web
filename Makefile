@@ -17,10 +17,10 @@
 #     EXE_FILES => [q[script/lamborghini_web_cgi.pl], q[script/lamborghini_web_create.pl], q[script/lamborghini_web_fastcgi.pl], q[script/lamborghini_web_server.pl], q[script/lamborghini_web_test.pl]]
 #     NAME => q[Lamborghini::Web]
 #     NO_META => q[1]
-#     PREREQ_PM => { DateTime=>q[0], MooseX::Types::Moose=>q[0], Catalyst::Request::Upload=>q[0], Email::Valid=>q[0], Catalyst::Plugin::ConfigLoader=>q[0], Moose::Util::TypeConstraints=>q[0], MooseX::Types::URI=>q[0], Regexp::Common=>q[0], Test::Moose=>q[0], Config::General=>q[0], DBIx::Class=>q[0], List::MoreUtils=>q[0], Moose=>q[0], namespace::autoclean=>q[0], File::MimeInfo::Magic=>q[0], Catalyst::Plugin::Static::Simple=>q[0], ExtUtils::MakeMaker=>q[6.42], Catalyst::Action::RenderView=>q[0], Test::More=>q[0], Net::Domain::TLD=>q[0], Net::DNS=>q[0], Catalyst::Runtime=>q[0] }
+#     PREREQ_PM => { DateTime=>q[0], MooseX::Types::Moose=>q[0], Catalyst::Request::Upload=>q[0], Email::Valid=>q[0], Catalyst::Plugin::ConfigLoader=>q[0], Moose::Util::TypeConstraints=>q[0], Starman=>q[0], Catalyst::Helper::PSGI=>q[0], MooseX::Types::URI=>q[0], Regexp::Common=>q[0], Test::Moose=>q[0], Config::General=>q[0], DBIx::Class=>q[0], List::MoreUtils=>q[0], Moose=>q[0], File::MimeInfo::Magic=>q[0], namespace::autoclean=>q[0], Catalyst::Plugin::Static::Simple=>q[0], Method::Signatures::Simple=>q[0], Plack=>q[0], ExtUtils::MakeMaker=>q[6.42], Locale::US=>q[0], Number::Phone::US=>q[0], Catalyst::Action::RenderView=>q[0], Test::More=>q[0], Net::DNS=>q[0], Net::Domain::TLD=>q[0], Catalyst::Runtime=>q[0] }
 #     VERSION => q[0.01]
 #     VERSION_FROM => q[lib/Lamborghini/Web.pm]
-#     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
+#     dist => {  }
 #     realclean => { FILES=>q[MYMETA.yml] }
 #     test => { TESTS=>q[t/00db.t t/01app.t t/02pod.t t/03podcoverage.t t/04class_sanity.t t/05strict.t t/controller_Gallery.t t/controller_Submission.t t/view_TT.t] }
 
@@ -77,46 +77,44 @@ INST_MAN3DIR = blib/man3
 MAN1EXT = 1
 MAN3EXT = 3
 INSTALLDIRS = site
+INSTALL_BASE = /home/amiri/roosterpirates/Lamborghini-Web/extlib
 DESTDIR = 
-PREFIX = $(SITEPREFIX)
-PERLPREFIX = /home/amiri/local
-SITEPREFIX = /home/amiri/local
-VENDORPREFIX = 
-INSTALLPRIVLIB = /home/amiri/local/lib/perl5/5.12.1
+PREFIX = $(INSTALL_BASE)
+INSTALLPRIVLIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /home/amiri/local/lib/perl5/site_perl/5.12.1
+INSTALLSITELIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
-INSTALLVENDORLIB = 
+INSTALLVENDORLIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /home/amiri/local/lib/perl5/5.12.1/x86_64-linux-thread-multi
+INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/x86_64-linux-thread-multi
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /home/amiri/local/lib/perl5/site_perl/5.12.1/x86_64-linux-thread-multi
+INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-thread-multi
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
-INSTALLVENDORARCH = 
+INSTALLVENDORARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-thread-multi
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /home/amiri/local/bin
+INSTALLBIN = $(INSTALL_BASE)/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /home/amiri/local/bin
+INSTALLSITEBIN = $(INSTALL_BASE)/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
-INSTALLVENDORBIN = 
+INSTALLVENDORBIN = $(INSTALL_BASE)/bin
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /home/amiri/local/bin
+INSTALLSCRIPT = $(INSTALL_BASE)/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /home/amiri/local/bin
+INSTALLSITESCRIPT = $(INSTALL_BASE)/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
-INSTALLVENDORSCRIPT = 
+INSTALLVENDORSCRIPT = $(INSTALL_BASE)/bin
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /home/amiri/local/man/man1
+INSTALLMAN1DIR = $(INSTALL_BASE)/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /home/amiri/local/man/man1
+INSTALLSITEMAN1DIR = $(INSTALL_BASE)/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
-INSTALLVENDORMAN1DIR = 
+INSTALLVENDORMAN1DIR = $(INSTALL_BASE)/man/man1
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /home/amiri/local/man/man3
+INSTALLMAN3DIR = $(INSTALL_BASE)/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /home/amiri/local/man/man3
+INSTALLSITEMAN3DIR = $(INSTALL_BASE)/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
-INSTALLVENDORMAN3DIR = 
+INSTALLVENDORMAN3DIR = $(INSTALL_BASE)/man/man3
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
 PERL_ARCHLIB = /home/amiri/local/lib/perl5/5.12.1/x86_64-linux-thread-multi
@@ -191,7 +189,19 @@ PERL_ARCHIVE       =
 PERL_ARCHIVE_AFTER = 
 
 
-TO_INST_PM = lib/Lamborghini/Schema.pm \
+TO_INST_PM = lib/Lamborghini/Forms.pm \
+	lib/Lamborghini/Forms/Fields/LamborghiniSubmit.pm \
+	lib/Lamborghini/Forms/LoginForm.pm \
+	lib/Lamborghini/Forms/PictureForm.pm \
+	lib/Lamborghini/Forms/RoleForm.pm \
+	lib/Lamborghini/Forms/SubmissionForm.pm \
+	lib/Lamborghini/Forms/UserForm.pm \
+	lib/Lamborghini/Forms/UserRoleForm.pm \
+	lib/Lamborghini/I18N.pm \
+	lib/Lamborghini/I18N/i_default.po \
+	lib/Lamborghini/Roles/FileUpload.pm \
+	lib/Lamborghini/Roles/HFHI18N.pm \
+	lib/Lamborghini/Schema.pm \
 	lib/Lamborghini/Schema/Result.pm \
 	lib/Lamborghini/Schema/Result/Picture.pm \
 	lib/Lamborghini/Schema/Result/Role.pm \
@@ -202,44 +212,95 @@ TO_INST_PM = lib/Lamborghini/Schema.pm \
 	lib/Lamborghini/Testing.pm \
 	lib/Lamborghini/Type/Library.pm \
 	lib/Lamborghini/Web.pm \
+	lib/Lamborghini/Web/Controller/Admin.pm \
+	lib/Lamborghini/Web/Controller/Admin/Picture.pm \
+	lib/Lamborghini/Web/Controller/Admin/Role.pm \
+	lib/Lamborghini/Web/Controller/Admin/User.pm \
+	lib/Lamborghini/Web/Controller/Admin/UserRole.pm \
 	lib/Lamborghini/Web/Controller/Gallery.pm \
+	lib/Lamborghini/Web/Controller/Login.pm \
 	lib/Lamborghini/Web/Controller/Root.pm \
 	lib/Lamborghini/Web/Controller/Submission.pm \
+	lib/Lamborghini/Web/ControllerRole/CRUD.pm \
 	lib/Lamborghini/Web/Model.pm \
+	lib/Lamborghini/Web/Model/DB.pm \
+	lib/Lamborghini/Web/Model/Picture.pm \
 	lib/Lamborghini/Web/View/TT.pm
 
-PM_TO_BLIB = lib/Lamborghini/Web.pm \
+PM_TO_BLIB = lib/Lamborghini/I18N.pm \
+	blib/lib/Lamborghini/I18N.pm \
+	lib/Lamborghini/Web.pm \
 	blib/lib/Lamborghini/Web.pm \
 	lib/Lamborghini/Web/Controller/Root.pm \
 	blib/lib/Lamborghini/Web/Controller/Root.pm \
-	lib/Lamborghini/Web/Controller/Gallery.pm \
-	blib/lib/Lamborghini/Web/Controller/Gallery.pm \
+	lib/Lamborghini/Web/Controller/Admin/UserRole.pm \
+	blib/lib/Lamborghini/Web/Controller/Admin/UserRole.pm \
+	lib/Lamborghini/Web/ControllerRole/CRUD.pm \
+	blib/lib/Lamborghini/Web/ControllerRole/CRUD.pm \
+	lib/Lamborghini/Forms/Fields/LamborghiniSubmit.pm \
+	blib/lib/Lamborghini/Forms/Fields/LamborghiniSubmit.pm \
+	lib/Lamborghini/I18N/i_default.po \
+	blib/lib/Lamborghini/I18N/i_default.po \
+	lib/Lamborghini/Web/Controller/Admin.pm \
+	blib/lib/Lamborghini/Web/Controller/Admin.pm \
 	lib/Lamborghini/Web/Model.pm \
 	blib/lib/Lamborghini/Web/Model.pm \
-	lib/Lamborghini/Schema/Result/Role.pm \
-	blib/lib/Lamborghini/Schema/Result/Role.pm \
-	lib/Lamborghini/Type/Library.pm \
-	blib/lib/Lamborghini/Type/Library.pm \
-	lib/Lamborghini/Schema/ResultSet.pm \
-	blib/lib/Lamborghini/Schema/ResultSet.pm \
-	lib/Lamborghini/Schema/Result/User.pm \
-	blib/lib/Lamborghini/Schema/Result/User.pm \
+	lib/Lamborghini/Roles/HFHI18N.pm \
+	blib/lib/Lamborghini/Roles/HFHI18N.pm \
+	lib/Lamborghini/Forms.pm \
+	blib/lib/Lamborghini/Forms.pm \
+	lib/Lamborghini/Forms/LoginForm.pm \
+	blib/lib/Lamborghini/Forms/LoginForm.pm \
 	lib/Lamborghini/Schema.pm \
 	blib/lib/Lamborghini/Schema.pm \
-	lib/Lamborghini/Web/View/TT.pm \
-	blib/lib/Lamborghini/Web/View/TT.pm \
-	lib/Lamborghini/Schema/Result/UserRole.pm \
-	blib/lib/Lamborghini/Schema/Result/UserRole.pm \
-	lib/Lamborghini/Schema/Result/Session.pm \
-	blib/lib/Lamborghini/Schema/Result/Session.pm \
+	lib/Lamborghini/Web/Controller/Admin/Role.pm \
+	blib/lib/Lamborghini/Web/Controller/Admin/Role.pm \
+	lib/Lamborghini/Web/Model/Picture.pm \
+	blib/lib/Lamborghini/Web/Model/Picture.pm \
+	lib/Lamborghini/Web/Controller/Admin/Picture.pm \
+	blib/lib/Lamborghini/Web/Controller/Admin/Picture.pm \
+	lib/Lamborghini/Web/Controller/Admin/User.pm \
+	blib/lib/Lamborghini/Web/Controller/Admin/User.pm \
 	lib/Lamborghini/Web/Controller/Submission.pm \
 	blib/lib/Lamborghini/Web/Controller/Submission.pm \
 	lib/Lamborghini/Schema/Result/Picture.pm \
 	blib/lib/Lamborghini/Schema/Result/Picture.pm \
+	lib/Lamborghini/Schema/Result.pm \
+	blib/lib/Lamborghini/Schema/Result.pm \
 	lib/Lamborghini/Testing.pm \
 	blib/lib/Lamborghini/Testing.pm \
-	lib/Lamborghini/Schema/Result.pm \
-	blib/lib/Lamborghini/Schema/Result.pm
+	lib/Lamborghini/Forms/UserRoleForm.pm \
+	blib/lib/Lamborghini/Forms/UserRoleForm.pm \
+	lib/Lamborghini/Forms/RoleForm.pm \
+	blib/lib/Lamborghini/Forms/RoleForm.pm \
+	lib/Lamborghini/Web/Controller/Gallery.pm \
+	blib/lib/Lamborghini/Web/Controller/Gallery.pm \
+	lib/Lamborghini/Web/Model/DB.pm \
+	blib/lib/Lamborghini/Web/Model/DB.pm \
+	lib/Lamborghini/Type/Library.pm \
+	blib/lib/Lamborghini/Type/Library.pm \
+	lib/Lamborghini/Schema/Result/Role.pm \
+	blib/lib/Lamborghini/Schema/Result/Role.pm \
+	lib/Lamborghini/Schema/ResultSet.pm \
+	blib/lib/Lamborghini/Schema/ResultSet.pm \
+	lib/Lamborghini/Forms/SubmissionForm.pm \
+	blib/lib/Lamborghini/Forms/SubmissionForm.pm \
+	lib/Lamborghini/Web/Controller/Login.pm \
+	blib/lib/Lamborghini/Web/Controller/Login.pm \
+	lib/Lamborghini/Schema/Result/User.pm \
+	blib/lib/Lamborghini/Schema/Result/User.pm \
+	lib/Lamborghini/Forms/PictureForm.pm \
+	blib/lib/Lamborghini/Forms/PictureForm.pm \
+	lib/Lamborghini/Web/View/TT.pm \
+	blib/lib/Lamborghini/Web/View/TT.pm \
+	lib/Lamborghini/Schema/Result/UserRole.pm \
+	blib/lib/Lamborghini/Schema/Result/UserRole.pm \
+	lib/Lamborghini/Forms/UserForm.pm \
+	blib/lib/Lamborghini/Forms/UserForm.pm \
+	lib/Lamborghini/Schema/Result/Session.pm \
+	blib/lib/Lamborghini/Schema/Result/Session.pm \
+	lib/Lamborghini/Roles/FileUpload.pm \
+	blib/lib/Lamborghini/Roles/FileUpload.pm
 
 
 # --- MakeMaker platform_constants section:
@@ -300,7 +361,7 @@ ZIPFLAGS = -r
 COMPRESS = gzip --best
 SUFFIX = .gz
 SHAR = shar
-PREOP = $(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"
+PREOP = $(NOECHO) $(NOOP)
 POSTOP = $(NOECHO) $(NOOP)
 TO_UNIX = $(NOECHO) $(NOOP)
 CI = ci -u
@@ -333,7 +394,8 @@ DISTVNAME = Lamborghini-Web-0.01
 
 PASTHRU = LIBPERL_A="$(LIBPERL_A)"\
 	LINKTYPE="$(LINKTYPE)"\
-	PREFIX="$(PREFIX)"
+	PREFIX="$(PREFIX)"\
+	INSTALL_BASE="$(INSTALL_BASE)"
 
 
 # --- MakeMaker special_targets section:
@@ -871,6 +933,7 @@ ppd :
 	$(NOECHO) $(ECHO) '    <AUTHOR></AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Catalyst::Action::RenderView" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Catalyst::Helper::PSGI" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Catalyst::Plugin::ConfigLoader" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Catalyst::Plugin::Static::Simple" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Catalyst::Request::Upload" />' >> $(DISTNAME).ppd
@@ -881,13 +944,20 @@ ppd :
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Email::Valid" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="File::MimeInfo::Magic" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="List::MoreUtils" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Locale::US" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Method::Signatures::Simple" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Moose::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Moose::Util::TypeConstraints" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="MooseX::Types::Moose" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="MooseX::Types::URI" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Net::DNS" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Net::Domain::TLD" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Number::Phone::US" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Plack::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Regexp::Common" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Starman::" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::Moose" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::More" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="namespace::autoclean" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-thread-multi-5.12" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
@@ -899,22 +969,44 @@ ppd :
 
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
+	  lib/Lamborghini/I18N.pm blib/lib/Lamborghini/I18N.pm \
 	  lib/Lamborghini/Web.pm blib/lib/Lamborghini/Web.pm \
 	  lib/Lamborghini/Web/Controller/Root.pm blib/lib/Lamborghini/Web/Controller/Root.pm \
-	  lib/Lamborghini/Web/Controller/Gallery.pm blib/lib/Lamborghini/Web/Controller/Gallery.pm \
+	  lib/Lamborghini/Web/Controller/Admin/UserRole.pm blib/lib/Lamborghini/Web/Controller/Admin/UserRole.pm \
+	  lib/Lamborghini/Web/ControllerRole/CRUD.pm blib/lib/Lamborghini/Web/ControllerRole/CRUD.pm \
+	  lib/Lamborghini/Forms/Fields/LamborghiniSubmit.pm blib/lib/Lamborghini/Forms/Fields/LamborghiniSubmit.pm \
+	  lib/Lamborghini/I18N/i_default.po blib/lib/Lamborghini/I18N/i_default.po \
+	  lib/Lamborghini/Web/Controller/Admin.pm blib/lib/Lamborghini/Web/Controller/Admin.pm \
 	  lib/Lamborghini/Web/Model.pm blib/lib/Lamborghini/Web/Model.pm \
-	  lib/Lamborghini/Schema/Result/Role.pm blib/lib/Lamborghini/Schema/Result/Role.pm \
-	  lib/Lamborghini/Type/Library.pm blib/lib/Lamborghini/Type/Library.pm \
-	  lib/Lamborghini/Schema/ResultSet.pm blib/lib/Lamborghini/Schema/ResultSet.pm \
-	  lib/Lamborghini/Schema/Result/User.pm blib/lib/Lamborghini/Schema/Result/User.pm \
+	  lib/Lamborghini/Roles/HFHI18N.pm blib/lib/Lamborghini/Roles/HFHI18N.pm \
+	  lib/Lamborghini/Forms.pm blib/lib/Lamborghini/Forms.pm \
+	  lib/Lamborghini/Forms/LoginForm.pm blib/lib/Lamborghini/Forms/LoginForm.pm \
 	  lib/Lamborghini/Schema.pm blib/lib/Lamborghini/Schema.pm \
-	  lib/Lamborghini/Web/View/TT.pm blib/lib/Lamborghini/Web/View/TT.pm \
-	  lib/Lamborghini/Schema/Result/UserRole.pm blib/lib/Lamborghini/Schema/Result/UserRole.pm \
-	  lib/Lamborghini/Schema/Result/Session.pm blib/lib/Lamborghini/Schema/Result/Session.pm \
+	  lib/Lamborghini/Web/Controller/Admin/Role.pm blib/lib/Lamborghini/Web/Controller/Admin/Role.pm \
+	  lib/Lamborghini/Web/Model/Picture.pm blib/lib/Lamborghini/Web/Model/Picture.pm \
+	  lib/Lamborghini/Web/Controller/Admin/Picture.pm blib/lib/Lamborghini/Web/Controller/Admin/Picture.pm \
+	  lib/Lamborghini/Web/Controller/Admin/User.pm blib/lib/Lamborghini/Web/Controller/Admin/User.pm \
 	  lib/Lamborghini/Web/Controller/Submission.pm blib/lib/Lamborghini/Web/Controller/Submission.pm \
 	  lib/Lamborghini/Schema/Result/Picture.pm blib/lib/Lamborghini/Schema/Result/Picture.pm \
+	  lib/Lamborghini/Schema/Result.pm blib/lib/Lamborghini/Schema/Result.pm \
 	  lib/Lamborghini/Testing.pm blib/lib/Lamborghini/Testing.pm \
-	  lib/Lamborghini/Schema/Result.pm blib/lib/Lamborghini/Schema/Result.pm 
+	  lib/Lamborghini/Forms/UserRoleForm.pm blib/lib/Lamborghini/Forms/UserRoleForm.pm \
+	  lib/Lamborghini/Forms/RoleForm.pm blib/lib/Lamborghini/Forms/RoleForm.pm \
+	  lib/Lamborghini/Web/Controller/Gallery.pm blib/lib/Lamborghini/Web/Controller/Gallery.pm \
+	  lib/Lamborghini/Web/Model/DB.pm blib/lib/Lamborghini/Web/Model/DB.pm \
+	  lib/Lamborghini/Type/Library.pm blib/lib/Lamborghini/Type/Library.pm \
+	  lib/Lamborghini/Schema/Result/Role.pm blib/lib/Lamborghini/Schema/Result/Role.pm \
+	  lib/Lamborghini/Schema/ResultSet.pm blib/lib/Lamborghini/Schema/ResultSet.pm \
+	  lib/Lamborghini/Forms/SubmissionForm.pm blib/lib/Lamborghini/Forms/SubmissionForm.pm \
+	  lib/Lamborghini/Web/Controller/Login.pm blib/lib/Lamborghini/Web/Controller/Login.pm \
+	  lib/Lamborghini/Schema/Result/User.pm blib/lib/Lamborghini/Schema/Result/User.pm \
+	  lib/Lamborghini/Forms/PictureForm.pm blib/lib/Lamborghini/Forms/PictureForm.pm \
+	  lib/Lamborghini/Web/View/TT.pm blib/lib/Lamborghini/Web/View/TT.pm 
+	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
+	  lib/Lamborghini/Schema/Result/UserRole.pm blib/lib/Lamborghini/Schema/Result/UserRole.pm \
+	  lib/Lamborghini/Forms/UserForm.pm blib/lib/Lamborghini/Forms/UserForm.pm \
+	  lib/Lamborghini/Schema/Result/Session.pm blib/lib/Lamborghini/Schema/Result/Session.pm \
+	  lib/Lamborghini/Roles/FileUpload.pm blib/lib/Lamborghini/Roles/FileUpload.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
 
@@ -926,25 +1018,6 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 
 # End.
 # Postamble by Module::Install 1.00
-# --- Module::Install::Admin::Makefile section:
-
-realclean purge ::
-	$(RM_F) $(DISTVNAME).tar$(SUFFIX)
-	$(RM_F) MANIFEST.bak _build
-	$(PERL) "-Ilib" "-MModule::Install::Admin" -e "remove_meta()"
-	$(RM_RF) inc
-
-reset :: purge
-
-upload :: test dist
-	cpan-upload -verbose $(DISTVNAME).tar$(SUFFIX)
-
-grok ::
-	perldoc Module::Install
-
-distsign ::
-	cpansign -s
-
 catalyst_par :: all
 	$(NOECHO) $(PERL) -Ilib -Minc::Module::Install -MModule::Install::Catalyst -e"Catalyst::Module::Install::_catalyst_par( '', 'Lamborghini-Web', { CLASSES => [], PAROPTS =>  {}, ENGINE => 'CGI', SCRIPT => '', USAGE => q## } )"
 # --- Module::Install::AutoInstall section:

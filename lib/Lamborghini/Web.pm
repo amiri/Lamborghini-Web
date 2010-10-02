@@ -16,7 +16,6 @@ use Catalyst qw/
     Session::Store::DBIC
     StackTrace
     Static::Simple
-    Static::Simple
     Unicode::Encoding
     /;
 

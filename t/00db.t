@@ -1,7 +1,5 @@
 use Lamborghini::Testing;
 
-use Data::Random qw/rand_words rand_enum/;
-
 my $test = Lamborghini::Testing->new;
 
 my $schema = $test->schema;
@@ -25,14 +23,25 @@ lives_ok {
 }
 "Create roles for user and admin";
 
+my $tolga;
 lives_ok {
-    $schema->resultset('User')->create(
+    $tolga = $schema->resultset('User')->create(
         {   email      => 'tolgaonuk@gmail.com',
             first_name => 'Tolga',
             last_name  => 'Onuk',
+            password => 't0lg@',
+            city => 'Los Angeles',
+            state => 'CA',
+            zip => '90019',
+            street_address => 'Stuff and Stuff Place #4',
+            why => 'Cuz Im cool',
+            phone => '1234567',
+            dob => DateTime->now,
         },
     );
 }
 "Created user Tolga";
+
+lives_ok { $tolga->add_to_roles($schema->resultset('Role')->all) } "Added Tolga as user and admin";
 
 done_testing;

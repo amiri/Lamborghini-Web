@@ -1,0 +1,16 @@
+[% title = (creation == 1 ? 'Create' : 'Edit') %]
+<!-- [% IF err %][% err %][% END %] -->
+[% meta.title = title _ " " _ item_name %]
+[% body_id = 'editor' %]
+    <h2><a href="/admin/[% item_name %]">Back to [% item_name | ucfirst %] Page</a></h2>
+
+<div class="span-22 prepend-1">
+    <fieldset><legend>[% title = (creation == 1 ? 'Create ' _ item_name : 'Update ' _ item_name) %]</legend>
+            [% form.render %]
+[% IF item_name == 'green' && !creation %]
+<h3><a href="/admin/picktip/create_for/[% form.item.id %]">Create a new pick tip</a></h3>
+<h3><a href="/admin/storagetip/create_for/[% form.item.id %]">Create a new storage tip</a></h3>
+[% END %]
+    </fieldset>
+
+</div>

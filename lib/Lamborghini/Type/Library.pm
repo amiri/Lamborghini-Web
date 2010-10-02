@@ -1,7 +1,6 @@
 package Lamborghini::Type::Library;
 
 use Regexp::Common 'RE_ALL';
-
 use Email::Valid;
 use MooseX::Types::Moose qw/Bool Value Num Int Str ArrayRef HashRef Object/;
 use MooseX::Types::Common::String
@@ -14,6 +13,8 @@ use Net::Domain::TLD;
 use Data::Dumper;
 use List::MoreUtils qw/any/;
 use Locale::Country;
+use Locale::US;
+use Number::Phone::US;
 
 use utf8;
 
@@ -25,8 +26,15 @@ use MooseX::Types -declare => [
         LamborghiniLastname
         LamborghiniObscenity
         LamborghiniPassword
+        LamborghiniState
+        LamborghiniZip
+        LamborghiniPhone
         /
 ];
+
+use namespace::autoclean;
+
+our $STATES = Locale::US->new;
 
 subtype LamborghiniEmail, as Str, where {
     Email::Valid->address( -address => "$_", -mxcheck => 1, -tldcheck => 1 );
@@ -64,6 +72,17 @@ subtype LamborghiniPassword, as StrongPassword, where {
 subtype LamborghiniObscenity, as Str, where {
     $_ !~ /$RE{profanity}/i;
 }, message {"The text contains obscenity"};
+
+subtype LamborghiniState, as Str, where {
+    (          exists $STATES->{code2state}{ uc($_) }
+            || exists $STATES->{state2code}{ uc($_) } );
+}, message {'That is not a valid state'};
+subtype LamborghiniZip, as Value, where {
+    /^$RE{zip}{US}{-extended => 'allow'}$/;
+}, message {"That is not a valid zip code"};
+subtype LamborghiniPhone, as Str, where {
+    Number::Phone::US::validate_number($_);
+}, message {"That is not a valid phone number"};
 
 __PACKAGE__->meta->make_immutable;
 

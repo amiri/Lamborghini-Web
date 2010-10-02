@@ -1,29 +1,135 @@
-div#container {
-    margin: 0 auto;
+div#container
+{
+	width:1675px;
+	margin:0 auto;
 }
 
 header
 {
 	display:block;
+	background:url(/static/images/header.png) no-repeat scroll 0 0 transparent;
+	width:997px;
+	height:176px;
+	margin:0 auto;
 }
 
-header
+footer
 {
-	background:url("/static/images/header.png") no-repeat scroll 0 0 transparent;
+	display:block;
+	background:url(/static/images/footer2.png) no-repeat scroll 0 0 transparent;
+	width:1080px;
+	height:450px;
+	margin:0 auto;
+	clear:both;
 }
 
-div#movie {
-    background:url("/static/images/movie.png") no-repeat scroll 0 0 transparent;
-    margin: 0 auto;
+div#movie
+{
+	background:url(/static/images/movie.png) no-repeat scroll 0 0 transparent;
+	width:998px;
+	height:516px;
+	margin:0 auto;
 }
 
-div#featured_model {
-    background:url("/static/images/cassie.png") no-repeat scroll 0 0 transparent;
-    float:left;
-    width:340px;
+div#featured_model
+{
+	background:url(/static/images/cassie.png) no-repeat scroll 0 0 transparent;
+	float:left;
+	width:339px;
+	height:900px;
 }
-div#featured_drink {
-    background:url("/static/images/drink.png") no-repeat scroll 0 0 transparent;
-    width:340px;
 
+div#featured_drink
+{
+	background:url(/static/images/drink.png) no-repeat scroll 0 0 transparent;
+	width:339px;
+	float:right;
+	height:900px;
+}
+
+div#links
+{
+	width:998px;
+	margin:0 auto;
+}
+
+#submit_info,#nightclub,#dj,#energy,#photo_shoot,#hotel,#tolga
+{
+	margin-top:10px;
+	width:327px;
+	height:191px;
+}
+
+#submit_info a,#nightclub a,#dj a,#energy a, #photo_shoot a,#hotel a,#tolga a
+{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+div#submit_info
+{
+	background:url(/static/images/submit_info2.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#energy
+{
+	background:url(/static/images/energy_drink.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#photo_shoot
+{
+	background:url(/static/images/photo_shoot.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#hotel
+{
+	background:url(/static/images/hotel.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#nightclub
+{
+	background:url(/static/images/nightclub.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#tolga
+{
+	background:url(/static/images/tolga.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#dj
+{
+	background:url(/static/images/dj2.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#video,div#slide
+{
+	padding-top:70px;
+	width:996px;
+	margin:0 auto;
+}
+
+div#submission
+{
+	margin:0 auto;
+	min-height:440px;
+}
+
+embed,iframe,div#slider
+{
+	max-height:440px;
+	display:block;
+	margin:0 auto;
+}
+
+.success,.notice,.error
+{
+	display:block;
 }

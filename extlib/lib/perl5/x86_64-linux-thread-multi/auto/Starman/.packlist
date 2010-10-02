@@ -1,0 +1,16 @@
+/home/amiri/local/bin/starman
+/home/amiri/local/lib/perl5/site_perl/5.12.1/HTTP/Server/PSGI/Net/Server/PreFork.pm
+/home/amiri/local/lib/perl5/site_perl/5.12.1/Plack/Handler/Starman.pm
+/home/amiri/local/lib/perl5/site_perl/5.12.1/Starman.pm
+/home/amiri/local/lib/perl5/site_perl/5.12.1/Starman/Server.pm
+/home/amiri/local/man/man1/starman.1
+/home/amiri/local/man/man3/Plack::Handler::Starman.3
+/home/amiri/local/man/man3/Starman.3
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/bin/starman
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/lib/perl5/HTTP/Server/PSGI/Net/Server/PreFork.pm
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/lib/perl5/Plack/Handler/Starman.pm
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/lib/perl5/Starman.pm
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/lib/perl5/Starman/Server.pm
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/man/man1/starman.1
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/man/man3/Plack::Handler::Starman.3
+/home/amiri/roosterpirates/Lamborghini-Web/extlib/man/man3/Starman.3

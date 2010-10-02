@@ -1,7 +1,6 @@
 package Lamborghini::Schema::Result::Picture;
 
 use Moose;
-use Lamborghini::Type::Library qw/:all/;
 extends 'Lamborghini::Schema::Result';
 
 __PACKAGE__->table("picture");

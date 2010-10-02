@@ -30,13 +30,13 @@ sub index : Chained('base') PathPart('') Args(0) {
     if ( lc $c->req->method eq 'post' ) {
         $c->req->params->{'file'} = $c->req->upload('file');
     }
-    $form->process(
-        ctx    => $c,
-        item   => $new_user,
-        params => $c->req->params,
-        picture_dir => $c->config->{"Model::Picture"}->{user_picture_dir},
-        thumbnail_dir => $c->config->{"Model::Picture"}->{user_thumbnail_dir},
 
+    $form->process(
+        ctx           => $c,
+        item          => $new_user,
+        params        => $c->req->params,
+        picture_dir   => $c->config->{"Model::Picture"}->{user_picture_dir},
+        thumbnail_dir => $c->config->{"Model::Picture"}->{user_thumbnail_dir},
     );
     $c->stash( fillinform => $form->fif, );
     return unless $form->validated;

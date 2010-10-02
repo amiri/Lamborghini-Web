@@ -1,9 +1,9 @@
 package Lamborghini::Schema::Result::User;
 
 use Moose;
-use Lamborghini::Type::Library qw/:all/;
 extends 'Lamborghini::Schema::Result';
 
+__PACKAGE__->load_components("EncodedColumn");
 __PACKAGE__->table("user");
 __PACKAGE__->resultset_class('Lamborghini::Schema::ResultSet');
 __PACKAGE__->add_columns(
@@ -21,11 +21,47 @@ __PACKAGE__->add_columns(
         is_nullable   => 0,
     },
     "email",
-    { data_type => "text", is_nullable => 0 },
+    { data_type => "text", is_nullable => 0, },
+
     "first_name",
-    { data_type => "text", is_nullable => 1 },
+    { data_type => "text", is_nullable => 0, },
+
+    "middle_initial",
+    { data_type => "text", is_nullable => 1, },
+
     "last_name",
-    { data_type => "text", is_nullable => 1 },
+    { data_type => "text", is_nullable => 0, },
+
+    "dob",
+    { data_type => "datetime", is_nullable => 0, },
+
+    "street_address",
+    { data_type => "text", is_nullable => 0, },
+
+    "city",
+    { data_type => "text", is_nullable => 0, },
+
+    "state",
+    { data_type => "text", is_nullable => 0, },
+
+    "zip",
+    { data_type => "text", is_nullable => 0, },
+
+    "phone",
+    { data_type => "text", is_nullable => 0, },
+
+    "why",
+    { data_type => 'text', is_nullable => 0, },
+
+    'password',
+    {   data_type           => 'text',
+        size                => undef,
+        encode_column       => 1,
+        encode_class        => 'Digest',
+        encode_args         => { salt_length => 10 },
+        encode_check_method => 'check_password',
+        is_nullable         => 1,
+    },
 );
 __PACKAGE__->set_primary_key("id");
 __PACKAGE__->add_unique_constraint( [qw/first_name last_name/] );

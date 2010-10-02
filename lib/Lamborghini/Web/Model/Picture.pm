@@ -7,6 +7,7 @@ use Data::Dumper;
 use Moose;
 use Try::Tiny;
 use Devel::Dwarn;
+use Method::Signatures::Simple;
 
 BEGIN { extends 'Catalyst::Controller'; }
 
@@ -17,42 +18,39 @@ has 'image_processor' => (
     builder => '_image_processor',
 );
 
-sub _image_processor {
-    my $self = shift;
+method _image_processor {
     return Imager->new();
 }
 
-sub validate_image {
-    my ( $self, $upload ) = @_;
-    return 0 unless $upload;
+method validate_image($upload) {
+    return 0
+        unless $upload;
     return 0 unless $upload->tempname;
     $self->image_processor->open( file => $upload->tempname );
-}
+    }
 
-sub make_thumbnail {
-    my ( $self, $image_path, $thumb_dir, $filename ) = @_;
-
+    method make_thumbnail( $image_path, $thumb_dir, $filename ) {
     my $image = $self->image_processor->read( file => $image_path )
         or die $self->image_processor->errstr();
 
-    my $thumb = $image->scale( ypixels => 60 );
+        my $thumb = $image->scale( ypixels => 60 );
 
-    $thumb->write( file => "$thumb_dir/$filename", jpegquality => 80 )
+        $thumb->write( file => "$thumb_dir/$filename", jpegquality => 80 )
         or die $thumb->errstr;
-}
+    }
 
-sub process_image {
-    my ( $self, $output_dir, $thumb_dir, $upload ) = @_;
-
-    if ( $self->validate_image($upload) ) {
-        my $file_path = dir( $output_dir, $upload->basename );
+    method process_image( $output_dir, $thumb_dir, $upload, $full_name ) {
+    ( my $name = lc($full_name) ) =~ s/\s+/_/g;
+        $name = $name . ".jpg";
+        if ( $self->validate_image($upload) ) {
+        my $file_path = dir( $output_dir, $name );
 
         $upload->copy_to($file_path);
 
-        $self->make_thumbnail( $file_path, $thumb_dir, $upload->basename );
+        $self->make_thumbnail( $file_path, $thumb_dir, $name );
     }
-}
+    }
 
-__PACKAGE__->meta->make_immutable;
+    __PACKAGE__->meta->make_immutable;
 
 1;

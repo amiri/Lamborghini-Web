@@ -1,14 +1,4 @@
-<div id="main">
-    <div id="featured_model">
-        <p>Here's Cassie.</p>
-    </div><!--end featured_model-->
-    <header>
-        <p>This is the header</p>
-    </header>
-    <div id="movie">
-        <p>Here's a movie frame.</p>
-    </div><!--end movie-->
-    <div id="featured_drink">
-        <p>Here's a drink.</p>
-    </div><!--end featured_drink-->
-</div><!--end main-->
+<div id="movie">
+    <div id="video" class="video_file" title="/static/videos/promo2.mp4">
+    </div><!-- end video -->
+</div><!--end movie-->

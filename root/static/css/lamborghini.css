@@ -16,7 +16,7 @@ header
 footer
 {
 	display:block;
-	background:url(/static/images/footer.png) no-repeat scroll 0 0 transparent;
+	background:url(/static/images/footer2.png) no-repeat scroll 0 0 transparent;
 	width:1080px;
 	height:450px;
 	margin:0 auto;
@@ -53,16 +53,41 @@ div#links
 	margin:0 auto;
 }
 
-#submit_info,#nightclub,#dj
+#submit_info,#nightclub,#dj,#energy,#photo_shoot,#hotel,#tolga
 {
 	margin-top:10px;
 	width:327px;
 	height:191px;
 }
 
+#submit_info a,#nightclub a,#dj a,#energy a, #photo_shoot a,#hotel a,#tolga a
+{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
 div#submit_info
 {
-	background:url(/static/images/submit_info.png) no-repeat scroll 0 0 transparent;
+	background:url(/static/images/submit_info2.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#energy
+{
+	background:url(/static/images/energy_drink.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#photo_shoot
+{
+	background:url(/static/images/photo_shoot.png) no-repeat scroll 0 0 transparent;
+	float:left;
+}
+
+div#hotel
+{
+	background:url(/static/images/hotel.png) no-repeat scroll 0 0 transparent;
 	float:left;
 }
 
@@ -72,23 +97,22 @@ div#nightclub
 	float:left;
 }
 
-div#dj
+div#tolga
 {
-	background:url(/static/images/dj.png) no-repeat scroll 0 0 transparent;
+	background:url(/static/images/tolga.png) no-repeat scroll 0 0 transparent;
 	float:left;
 }
 
-#submit_info a,#nightclub a,#dj a
+div#dj
 {
-	display:block;
-	width:100%;
-	height:100%;
+	background:url(/static/images/dj2.png) no-repeat scroll 0 0 transparent;
+	float:left;
 }
 
 div#video,div#slide
 {
 	padding-top:70px;
-	width:998px;
+	width:996px;
 	margin:0 auto;
 }
 
@@ -105,6 +129,7 @@ embed,iframe,div#slider
 	margin:0 auto;
 }
 
-.success,.notice,.error {
-    display:block;
+.success,.notice,.error
+{
+	display:block;
 }
