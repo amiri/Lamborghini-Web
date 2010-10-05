@@ -11,7 +11,7 @@
 
   <title>Lamborghini Model Search</title>
   <meta name="description" content="Lamborghini Model Search and Application Submission">
-  <meta name="author" content="Amiri Barksdale">
+  <meta name="author" content="Amiri Barksdale, Rooster Pirates">
 
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
 
@@ -21,6 +21,7 @@
 
   <link rel="stylesheet" href="[% c.uri_for('/static/css/style.css') %]">
   <link rel="stylesheet" href="[% c.uri_for('/static/css/blueprint/src/forms.css') %]">
+  <link rel="stylesheet" href="[% c.uri_for('/static/css/blueprint/plugins/buttons/screen.css') %]">
   <link rel="stylesheet" href="[% c.uri_for('/static/css/nivo-slider.css') %]">
   <link rel="stylesheet" href="[% c.uri_for('/static/css/lamborghini.css') %]">
 

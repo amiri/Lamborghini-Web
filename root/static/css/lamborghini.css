@@ -27,7 +27,7 @@ div#movie
 {
 	background:url(/static/images/movie.png) no-repeat scroll 0 0 transparent;
 	width:998px;
-	height:516px;
+	/*height:516px;*/
 	margin:0 auto;
 }
 
@@ -60,7 +60,7 @@ div#links
 	height:191px;
 }
 
-#submit_info a,#nightclub a,#dj a,#energy a, #photo_shoot a,#hotel a,#tolga a
+#submit_info a,#nightclub a,#dj a,#energy a,#photo_shoot a,#hotel a,#tolga a
 {
 	display:block;
 	width:100%;
@@ -111,20 +111,27 @@ div#dj
 
 div#video,div#slide
 {
-	padding-top:70px;
+	padding-top:62px;
 	width:996px;
 	margin:0 auto;
 }
 
 div#submission
 {
+	background:url(/static/images/form/header.png) no-repeat scroll 0 0 transparent;
+	width:997px;
 	margin:0 auto;
-	min-height:440px;
+	min-height:600px;
+}
+
+div#submission form
+{
+	padding-top:130px;
 }
 
 embed,iframe,div#slider
 {
-	max-height:440px;
+	/*max-height:440px;*/
 	display:block;
 	margin:0 auto;
 }
@@ -132,4 +139,149 @@ embed,iframe,div#slider
 .success,.notice,.error
 {
 	display:block;
+}
+
+div.form1
+{
+	width:498px;
+	float:left;
+	position:relative;
+    margin-right:10px;
+}
+
+div.form2
+{
+	width:488px;
+	float:right;
+	position:relative;
+}
+
+button.model_button
+{
+	background:url(/static/images/form/send.png) no-repeat scroll 50% 50% transparent;
+	width:220px;
+	height:42px;
+}
+div#disclaimer
+{
+	background:url(/static/images/form/disclaimer.png) no-repeat scroll right center transparent;
+	width:997px;
+	height:29px;
+    margin-bottom:20px;
+    margin-top:10px;
+}
+
+button.model_button,div#disclaimer
+{
+	text-indent:-99999px;
+    float:right;
+}
+
+#dob_div {
+    width:100%;
+}
+#dob_div div {
+    float:left;
+}
+#first_name_div,#middle_initial_div,#last_name_div,#dob_div,#street_address_div,#city_div,#state_div,#zip_div,#email_div,#phone_div,#file1_div,#file2_div,#file3_div,#file4_div,#why_div
+{
+    height:20px;
+    clear:both;
+}
+#first_name_span,#middle_initial_span,#last_name_span,#dob_span,#street_address_span,#city_span,#state_span,#zip_span,#email_span,#phone_span,#file1_span,#file2_span,#file3_span,#file4_span
+{
+    width:149px;
+    display:block;
+    float:left;
+    height:20px;
+    margin: 0.5em 0;
+}
+
+#first_name_span
+{
+	background:url(/static/images/form/first_name.png) no-repeat scroll left bottom transparent;
+}
+
+#middle_initial_span
+{
+	background:url(/static/images/form/middle_initial.png) no-repeat scroll left bottom transparent;
+}
+
+#last_name_span
+{
+	background:url(/static/images/form/last_name.png) no-repeat scroll left bottom transparent;
+}
+
+#dob_span
+{
+	background:url(/static/images/form/dob.png) no-repeat scroll left bottom transparent;
+    margin-right:48px;
+}
+
+#street_address_span
+{
+	background:url(/static/images/form/street_address.png) no-repeat scroll left bottom transparent;
+}
+
+#city_span
+{
+	background:url(/static/images/form/city.png) no-repeat scroll left bottom transparent;
+}
+
+#state_span
+{
+	background:url(/static/images/form/state.png) no-repeat scroll left bottom transparent;
+    margin-right:48px;
+}
+
+#zip_span
+{
+	background:url(/static/images/form/zip.png) no-repeat scroll left bottom transparent;
+}
+
+#email_span
+{
+	background:url(/static/images/form/email.png) no-repeat scroll left bottom transparent;
+}
+
+#phone_span
+{
+	background:url(/static/images/form/phone.png) no-repeat scroll left bottom transparent;
+}
+
+#file1_span
+{
+	background:url(/static/images/form/photos.png) no-repeat scroll left bottom transparent;
+    height:24px;
+    width:192px;
+}
+
+#why_span {
+	background:url(/static/images/form/why.png) no-repeat scroll left bottom transparent;
+    height:29px;
+    width:203px;
+    display:block;
+    float:left;
+    margin: 0.5em 0;
+    
+}
+
+#first_name_div input,#middle_initial_div input,#last_name_div input,#dob_div input,#street_address_div input,#city_div input,#state_div input,#zip_div input,#email_div input,#phone_div input,#file1_div input,#file2_div input,#file3_div input,#file4_div input
+{
+    display:block;
+    float:right;
+    height:20px;
+    width:60%;
+}
+#file1_div input,#file2_div input,#file3_div input,#file4_div input {
+    height:28px;
+}
+
+
+
+#why_div textarea {
+    display:block;
+    float:right;
+    width:260px;
+    height:150px;
 }

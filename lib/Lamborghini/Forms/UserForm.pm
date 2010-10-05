@@ -10,6 +10,8 @@ with 'Lamborghini::Roles::FileUpload';
 
 use DateTime;
 
+has 'widget_wrapper' => ( is => 'rw', default => 'none' );
+
 has 'states' => (
     is      => 'ro',
     isa     => 'HashRef',

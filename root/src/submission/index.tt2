@@ -1,3 +1,27 @@
 <div id="submission">
-    [% form.render %]
+<form method="post" enctype="multipart/form-data" id="submit_form">
+    <div class="form1">
+        [% form.field('first_name').render %]
+        [% form.field('middle_initial').render %]
+        [% form.field('last_name').render %]
+        [% form.field('dob').render %]
+        [% form.field('street_address').render %]
+        [% form.field('city').render %]
+        [% form.field('state').render %]
+        [% form.field('zip').render %]
+        [% form.field('email').render %]
+        [% form.field('phone').render %]
+    </div><!-- end form1 -->
+    <div class="form2">
+        [% form.field('file1').render %]
+        [% form.field('file2').render %]
+        [% form.field('file3').render %]
+        [% form.field('file4').render %]
+        [% form.field('why').render %]
+    </div><!-- end form2 -->
+        <button class="button positive model_button" type="submit">Send Application</button>
+</form>
+
+        <div id="disclaimer"><p>All information that you send us is going to be stored privately in our database. By clicking the send button you agree to our model search privacy policy, terms and conditions, and the Tonino Lamborghini Energy Drink legal terms.</p></div>
+[%# form.render %]
 </div><!-- end submission-->

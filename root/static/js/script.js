@@ -2,7 +2,7 @@ jQuery(function($) {
     $(document).ready(function() {
         if ($('div.video_file').length != 0) {
             $('div.video_file').each(function() {
-                var video = new SWFObject('/static/swf/player.swf', 'player', '817', '446', '9');
+                var video = new SWFObject('/static/swf/player.swf', 'player', '996', '543', '9');
                 video.addParam('allowfullscreen','true');
                 video.addParam('allowscriptaccess','always');
                 var file = $(this).attr('title');

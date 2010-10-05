@@ -28,9 +28,11 @@ sub index : Chained('base') PathPart('') Args(0) {
         form     => $form,
     );
     if ( lc $c->req->method eq 'post' ) {
-        $c->req->params->{'file'} = $c->req->upload('file');
+            $c->req->params->{'file1'} = $c->req->upload('file1') if $c->req->params->{'file1'};
+            $c->req->params->{'file2'} = $c->req->upload('file2') if $c->req->params->{'file2'};
+            $c->req->params->{'file3'} = $c->req->upload('file3') if $c->req->params->{'file3'};
+            $c->req->params->{'file4'} = $c->req->upload('file4') if $c->req->params->{'file4'};
     }
-
     $form->process(
         ctx           => $c,
         item          => $new_user,
@@ -40,12 +42,17 @@ sub index : Chained('base') PathPart('') Args(0) {
     );
     $c->stash( fillinform => $form->fif, );
     return unless $form->validated;
-    my $new_picture = $c->model('DB::Picture')->create(
-        {   user        => $new_user->id,
-            file        => $form->field('file')->value,
-            description => $new_user->email,
-        }
-    );
+    for my $upload ( 1 .. 4 ) {
+        print STDERR "My file name value to be saved is: ",
+            $form->field("file$upload")->value, "\n";
+
+        my $new_picture = $c->model('DB::Picture')->create(
+            {   user        => $new_user->id,
+                file        => $upload . $form->field("file$upload")->value,
+                description => "Upload $upload for " . $new_user->email,
+            }
+        ) if $form->field("file$upload")->value;
+    }
     $c->flash( status_msg => "Thank you for submitting your information." );
     $c->res->redirect( $c->uri_for('/') );
 }

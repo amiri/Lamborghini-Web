@@ -42,6 +42,7 @@ method validate_image($upload) {
     method process_image( $output_dir, $thumb_dir, $upload, $full_name ) {
     ( my $name = lc($full_name) ) =~ s/\s+/_/g;
         $name = $name . ".jpg";
+        print STDERR "In process image my filename is: ", $name, "\n";
         if ( $self->validate_image($upload) ) {
         my $file_path = dir( $output_dir, $name );
 
