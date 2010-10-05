@@ -17,7 +17,7 @@
 #     EXE_FILES => [q[script/lamborghini_web_cgi.pl], q[script/lamborghini_web_create.pl], q[script/lamborghini_web_fastcgi.pl], q[script/lamborghini_web_server.pl], q[script/lamborghini_web_test.pl]]
 #     NAME => q[Lamborghini::Web]
 #     NO_META => q[1]
-#     PREREQ_PM => { DateTime=>q[0], MooseX::Types::Moose=>q[0], Catalyst::Request::Upload=>q[0], Email::Valid=>q[0], Catalyst::Plugin::ConfigLoader=>q[0], Moose::Util::TypeConstraints=>q[0], Starman=>q[0], Catalyst::Helper::PSGI=>q[0], MooseX::Types::URI=>q[0], Regexp::Common=>q[0], Test::Moose=>q[0], Config::General=>q[0], DBIx::Class=>q[0], List::MoreUtils=>q[0], Moose=>q[0], File::MimeInfo::Magic=>q[0], namespace::autoclean=>q[0], Catalyst::Plugin::Static::Simple=>q[0], Method::Signatures::Simple=>q[0], Plack=>q[0], ExtUtils::MakeMaker=>q[6.42], Locale::US=>q[0], Number::Phone::US=>q[0], Catalyst::Action::RenderView=>q[0], Test::More=>q[0], Net::DNS=>q[0], Net::Domain::TLD=>q[0], Catalyst::Runtime=>q[0] }
+#     PREREQ_PM => { DateTime=>q[0], MooseX::Types::Moose=>q[0], Catalyst::Request::Upload=>q[0], Email::Valid=>q[0], Catalyst::Plugin::ConfigLoader=>q[0], Moose::Util::TypeConstraints=>q[0], Starman=>q[0], Catalyst::Helper::PSGI=>q[0], MooseX::Types::URI=>q[0], Regexp::Common=>q[0], Test::Moose=>q[0], Config::General=>q[0], DBIx::Class=>q[0], List::MoreUtils=>q[0], Moose=>q[0], namespace::autoclean=>q[0], File::MimeInfo::Magic=>q[0], Method::Signatures::Simple=>q[0], Catalyst::Plugin::Static::Simple=>q[0], Plack=>q[0], ExtUtils::MakeMaker=>q[6.42], Locale::US=>q[0], Number::Phone::US=>q[0], Catalyst::Action::RenderView=>q[0], Test::More=>q[0], Net::DNS=>q[0], Net::Domain::TLD=>q[0], Catalyst::Runtime=>q[0] }
 #     VERSION => q[0.01]
 #     VERSION_FROM => q[lib/Lamborghini/Web.pm]
 #     dist => {  }
@@ -77,44 +77,46 @@ INST_MAN3DIR = blib/man3
 MAN1EXT = 1
 MAN3EXT = 3
 INSTALLDIRS = site
-INSTALL_BASE = /home/amiri/roosterpirates/Lamborghini-Web/extlib
 DESTDIR = 
-PREFIX = $(INSTALL_BASE)
-INSTALLPRIVLIB = $(INSTALL_BASE)/lib/perl5
+PREFIX = $(SITEPREFIX)
+PERLPREFIX = /home/amiri/local
+SITEPREFIX = /home/amiri/local
+VENDORPREFIX = 
+INSTALLPRIVLIB = /home/amiri/local/lib/perl5/5.12.1
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = $(INSTALL_BASE)/lib/perl5
+INSTALLSITELIB = /home/amiri/local/lib/perl5/site_perl/5.12.1
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
-INSTALLVENDORLIB = $(INSTALL_BASE)/lib/perl5
+INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/x86_64-linux-thread-multi
+INSTALLARCHLIB = /home/amiri/local/lib/perl5/5.12.1/x86_64-linux-thread-multi
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-thread-multi
+INSTALLSITEARCH = /home/amiri/local/lib/perl5/site_perl/5.12.1/x86_64-linux-thread-multi
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
-INSTALLVENDORARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-thread-multi
+INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = $(INSTALL_BASE)/bin
+INSTALLBIN = /home/amiri/local/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(INSTALL_BASE)/bin
+INSTALLSITEBIN = /home/amiri/local/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
-INSTALLVENDORBIN = $(INSTALL_BASE)/bin
+INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = $(INSTALL_BASE)/bin
+INSTALLSCRIPT = /home/amiri/local/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = $(INSTALL_BASE)/bin
+INSTALLSITESCRIPT = /home/amiri/local/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
-INSTALLVENDORSCRIPT = $(INSTALL_BASE)/bin
+INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLMAN1DIR = /home/amiri/local/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLSITEMAN1DIR = /home/amiri/local/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
-INSTALLVENDORMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLMAN3DIR = /home/amiri/local/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLSITEMAN3DIR = /home/amiri/local/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
-INSTALLVENDORMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
 PERL_ARCHLIB = /home/amiri/local/lib/perl5/5.12.1/x86_64-linux-thread-multi
@@ -197,6 +199,7 @@ TO_INST_PM = lib/Lamborghini/Forms.pm \
 	lib/Lamborghini/Forms/SubmissionForm.pm \
 	lib/Lamborghini/Forms/UserForm.pm \
 	lib/Lamborghini/Forms/UserRoleForm.pm \
+	lib/Lamborghini/Forms/Widget/Wrapper/Simple.pm \
 	lib/Lamborghini/I18N.pm \
 	lib/Lamborghini/I18N/i_default.po \
 	lib/Lamborghini/Roles/FileUpload.pm \
@@ -271,6 +274,8 @@ PM_TO_BLIB = lib/Lamborghini/I18N.pm \
 	blib/lib/Lamborghini/Testing.pm \
 	lib/Lamborghini/Forms/UserRoleForm.pm \
 	blib/lib/Lamborghini/Forms/UserRoleForm.pm \
+	lib/Lamborghini/Forms/Widget/Wrapper/Simple.pm \
+	blib/lib/Lamborghini/Forms/Widget/Wrapper/Simple.pm \
 	lib/Lamborghini/Forms/RoleForm.pm \
 	blib/lib/Lamborghini/Forms/RoleForm.pm \
 	lib/Lamborghini/Web/Controller/Gallery.pm \
@@ -394,8 +399,7 @@ DISTVNAME = Lamborghini-Web-0.01
 
 PASTHRU = LIBPERL_A="$(LIBPERL_A)"\
 	LINKTYPE="$(LINKTYPE)"\
-	PREFIX="$(PREFIX)"\
-	INSTALL_BASE="$(INSTALL_BASE)"
+	PREFIX="$(PREFIX)"
 
 
 # --- MakeMaker special_targets section:
@@ -956,8 +960,6 @@ ppd :
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Plack::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Regexp::Common" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Starman::" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::Moose" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::More" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="namespace::autoclean" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-thread-multi-5.12" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
@@ -991,6 +993,7 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	  lib/Lamborghini/Schema/Result.pm blib/lib/Lamborghini/Schema/Result.pm \
 	  lib/Lamborghini/Testing.pm blib/lib/Lamborghini/Testing.pm \
 	  lib/Lamborghini/Forms/UserRoleForm.pm blib/lib/Lamborghini/Forms/UserRoleForm.pm \
+	  lib/Lamborghini/Forms/Widget/Wrapper/Simple.pm blib/lib/Lamborghini/Forms/Widget/Wrapper/Simple.pm \
 	  lib/Lamborghini/Forms/RoleForm.pm blib/lib/Lamborghini/Forms/RoleForm.pm \
 	  lib/Lamborghini/Web/Controller/Gallery.pm blib/lib/Lamborghini/Web/Controller/Gallery.pm \
 	  lib/Lamborghini/Web/Model/DB.pm blib/lib/Lamborghini/Web/Model/DB.pm \
@@ -999,10 +1002,10 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	  lib/Lamborghini/Schema/ResultSet.pm blib/lib/Lamborghini/Schema/ResultSet.pm \
 	  lib/Lamborghini/Forms/SubmissionForm.pm blib/lib/Lamborghini/Forms/SubmissionForm.pm \
 	  lib/Lamborghini/Web/Controller/Login.pm blib/lib/Lamborghini/Web/Controller/Login.pm \
-	  lib/Lamborghini/Schema/Result/User.pm blib/lib/Lamborghini/Schema/Result/User.pm \
-	  lib/Lamborghini/Forms/PictureForm.pm blib/lib/Lamborghini/Forms/PictureForm.pm \
-	  lib/Lamborghini/Web/View/TT.pm blib/lib/Lamborghini/Web/View/TT.pm 
+	  lib/Lamborghini/Schema/Result/User.pm blib/lib/Lamborghini/Schema/Result/User.pm 
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
+	  lib/Lamborghini/Forms/PictureForm.pm blib/lib/Lamborghini/Forms/PictureForm.pm \
+	  lib/Lamborghini/Web/View/TT.pm blib/lib/Lamborghini/Web/View/TT.pm \
 	  lib/Lamborghini/Schema/Result/UserRole.pm blib/lib/Lamborghini/Schema/Result/UserRole.pm \
 	  lib/Lamborghini/Forms/UserForm.pm blib/lib/Lamborghini/Forms/UserForm.pm \
 	  lib/Lamborghini/Schema/Result/Session.pm blib/lib/Lamborghini/Schema/Result/Session.pm \

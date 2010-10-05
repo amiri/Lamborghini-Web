@@ -58,23 +58,23 @@
                     <a href="[% c.uri_for('/submit') %]"></a>
                 </div><!-- end submit_info -->
                 <div id="energy">
-                    <a href="http://google.com"></a>
+                    <a href="/"></a>
                 </div><!-- end energy -->
 
                 <div id="photo_shoot">
-                    <a href="http://google.com"></a>
+                    <a href="/"></a>
                 </div><!-- end photo_shoot -->
                 
                 <div id="hotel">
-                    <a href="http://google.com"></a>
+                    <a href="/"></a>
                 </div><!-- end hotel -->
                 
                 <div id="dj">
-                    <a href="http://disney.com"></a>
+                    <a href="/"></a>
                 </div><!-- end dj -->
                 
                 <div id="tolga">
-                    <a href="http://disney.com"></a>
+                    <a href="/"></a>
                 </div><!-- end tolga -->
             </div><!-- end links -->
         </div><!--end main-->
